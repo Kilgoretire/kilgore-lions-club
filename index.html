@@ -211,6 +211,8 @@
   .lunch-body .menu { font-size: 15.5px; color: var(--ink-soft); }
   .lunch-body .cater { font-size: 13.5px; color: var(--ink-soft); opacity: 0.75; margin-top: 5px; }
   .lunch-row.pending .lunch-body h4 { color: var(--ink-soft); font-weight: 600; }
+  .lunch-row[hidden] { display: none; }
+  .lunch-empty { background: var(--cream); border: 1px dashed var(--line); border-radius: 12px; padding: 20px; color: var(--ink-soft); font-size: 16px; }
   .lunch-note { margin-top: 22px; font-size: 15px; color: var(--ink-soft); }
   .lunch-note a { color: var(--blue); font-weight: 600; text-decoration: none; }
   .lunch-note a:hover { text-decoration: underline; }
@@ -312,6 +314,24 @@
   .join-box p { font-size: 14.5px; margin-bottom: 16px; }
   @media (max-width: 800px) { .join { grid-template-columns: 1fr; padding: 30px; } }
 
+
+  /* ---------- GIVE ---------- */
+  .give-band {
+    background: var(--cream); border: 1px solid var(--line); border-radius: 16px;
+    padding: 40px; display: grid; grid-template-columns: 1.25fr 1fr;
+    gap: 36px; align-items: center;
+  }
+  .give-band h2 { font-size: 32px; margin-bottom: 12px; }
+  .give-band p { color: var(--ink-soft); font-size: 17px; }
+  .give-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
+  .give-methods { font-size: 14.5px; font-weight: 600; color: var(--ink-soft); }
+  .give-fine { font-size: 13.5px !important; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .give-side { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+  .give-side h4 { font-family: 'Fraunces', serif; font-size: 18px; margin-bottom: 10px; }
+  .give-side p { font-size: 14.5px; }
+  .give-side .give-addr { margin-top: 12px; font-size: 14.5px; line-height: 1.5; font-weight: 600; color: var(--ink); }
+  @media (max-width: 800px) { .give-band { grid-template-columns: 1fr; padding: 28px; } }
+
   /* ---------- FOOTER ---------- */
   footer { padding: 46px 0 40px; border-top: 1px solid var(--line); margin-top: 20px; }
   .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 28px; font-size: 14px; color: var(--ink-soft); }
@@ -362,6 +382,7 @@
       <li><a class="nav-link" href="#events">Events</a></li>
       <li><a class="nav-link" href="raffle.html">Raffle</a></li>
       <li><a class="nav-link" href="#service">What We Do</a></li>
+      <li><a class="nav-link" href="#give">Give</a></li>
       <li><a class="nav-link" href="#join">Join Us</a></li>
     </ul>
     <a href="#join" class="nav-cta">Visit a Meeting</a>
@@ -414,36 +435,35 @@
       <p>307 N. Rusk Street, $15 per person, home cooked every week. You do not have to be a member to eat with us — guests are always welcome, so bring a friend.</p>
     </div>
     <div class="lunch-list">
-      <article class="lunch-row next">
+      <article class="lunch-row" data-date="2026-08-27">
         <div class="lunch-date"><span class="mon">AUG</span><span class="num">27</span></div>
         <div class="lunch-body">
-          <div class="lunch-badge">This Week</div>
           <h4>Willie Gooden<span class="org">Kilgore College Football Coach</span></h4>
           <p class="menu">Menu coming soon.</p>
         </div>
       </article>
-      <article class="lunch-row">
+      <article class="lunch-row" data-date="2026-09-03">
         <div class="lunch-date"><span class="mon">SEP</span><span class="num">3</span></div>
         <div class="lunch-body">
           <h4>Grace Henderson, LPC<span class="org">Executive Director, Operation True North</span></h4>
           <p class="menu">Menu coming soon.</p>
         </div>
       </article>
-      <article class="lunch-row">
+      <article class="lunch-row" data-date="2026-09-10">
         <div class="lunch-date"><span class="mon">SEP</span><span class="num">10</span></div>
         <div class="lunch-body">
           <h4>Charlie &ldquo;Snow Ball&rdquo; Walker<span class="org">SAFFE Day</span></h4>
           <p class="menu">Menu coming soon.</p>
         </div>
       </article>
-      <article class="lunch-row">
+      <article class="lunch-row" data-date="2026-09-17">
         <div class="lunch-date"><span class="mon">SEP</span><span class="num">17</span></div>
         <div class="lunch-body">
           <h4>Stephanie Williams<span class="org">Kilgore College Women&rsquo;s Basketball Coach</span></h4>
           <p class="menu">Menu coming soon.</p>
         </div>
       </article>
-      <article class="lunch-row">
+      <article class="lunch-row" data-date="2026-09-24">
         <div class="lunch-date"><span class="mon">SEP</span><span class="num">24</span></div>
         <div class="lunch-body">
           <h4>Students of the Month</h4>
@@ -578,6 +598,28 @@
   </div>
 </section>
 
+<section class="section section-alt" id="give">
+  <div class="wrap">
+    <div class="give-band">
+      <div>
+        <div class="eyebrow"><span class="dot"></span>Support the Club</div>
+        <h2>Give to the Kilgore Lions Club</h2>
+        <p>Your gift goes straight back into Kilgore &mdash; our students, our schools, and neighbors our members know by name. Give once, or set up a monthly gift that keeps working all year long.</p>
+        <div class="give-actions">
+          <a href="https://www.paypal.com/donate/?hosted_button_id=FU5EFC6DERBBW" target="_blank" rel="noopener" class="btn btn-gold">Donate Now</a>
+          <span class="give-methods">PayPal or Venmo &mdash; both on the same page</span>
+        </div>
+        <p class="give-fine">Donations are received by Kilgore Lions Club Charities Inc, a 501(c)(3) organization.</p>
+      </div>
+      <div class="give-side">
+        <h4>Rather not give online?</h4>
+        <p>Mail a check made out to Kilgore Lions Club Charities, or hand it to any member at Thursday lunch.</p>
+        <div class="give-addr">PO Box 1256<br>Kilgore, Texas 75663</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="join">
   <div class="wrap">
     <div class="join">
@@ -626,6 +668,7 @@
         <a href="#events">Events</a>
         <a href="raffle.html">Halloween Raffle</a>
         <a href="#service">What We Do</a>
+        <a href="#give">Give</a>
       </div>
       <div class="col">
         <h5>Connect</h5>
@@ -639,5 +682,75 @@
     <p class="legal">© 2026 Kilgore Lions Club · Kilgore, Texas · Serving since 1931<br>The Lions Clubs International emblem is a registered trademark of Lions Clubs International, used by a chartered member club.</p>
   </div>
 </footer>
+
+
+<script>
+/* Upcoming Lunches: badge the next lunch and hide the ones already past.
+   Each .lunch-row carries data-date="YYYY-MM-DD". Add new rows with that
+   attribute and everything below keeps working on its own. */
+(function () {
+  function localDate(str) {
+    var p = String(str).split('-');
+    return new Date(+p[0], +p[1] - 1, +p[2]);   // local midnight, not UTC
+  }
+
+  function refreshLunches() {
+    var list = document.querySelector('.lunch-list');
+    if (!list) return;
+
+    var rows = Array.prototype.slice.call(list.querySelectorAll('.lunch-row[data-date]'));
+    if (!rows.length) return;
+
+    var now = new Date();
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var DAY = 86400000;
+    var upcoming = null;
+
+    rows.forEach(function (row) {
+      var when = localDate(row.getAttribute('data-date'));
+      var past = when < today;
+
+      row.hidden = past;
+      row.classList.remove('next');
+
+      var old = row.querySelector('.lunch-badge');
+      if (old) old.parentNode.removeChild(old);
+
+      if (!past && !upcoming) upcoming = { row: row, days: Math.round((when - today) / DAY) };
+    });
+
+    var note = list.parentNode.querySelector('.lunch-empty');
+    if (note) note.parentNode.removeChild(note);
+
+    if (upcoming) {
+      upcoming.row.classList.add('next');
+      var label = upcoming.days === 0 ? 'Today'
+                : upcoming.days <= 6  ? 'This Week'
+                : 'Next Up';
+      var badge = document.createElement('div');
+      badge.className = 'lunch-badge';
+      badge.textContent = label;
+      var body = upcoming.row.querySelector('.lunch-body');
+      if (body) body.insertBefore(badge, body.firstChild);
+    } else {
+      var empty = document.createElement('p');
+      empty.className = 'lunch-empty';
+      empty.innerHTML = 'The next round of lunch dates is being scheduled. We still meet every Thursday at noon \u2014 join our <a href="https://groupme.com/join_group/116471191/upNUgMLu" target="_blank" rel="noopener">GroupMe</a> for the weekly reminder.';
+      list.parentNode.insertBefore(empty, list.nextSibling);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', refreshLunches);
+  } else {
+    refreshLunches();
+  }
+  // Re-check if the tab has been left open across midnight.
+  setInterval(refreshLunches, 60 * 60 * 1000);
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) refreshLunches();
+  });
+})();
+</script>
 
 </body></html>
