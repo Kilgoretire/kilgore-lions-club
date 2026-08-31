@@ -97,6 +97,7 @@
     display: flex; align-items: center; gap: 12px;
     font-family: 'Fraunces', serif; font-weight: 700; font-size: 19px;
     color: var(--blue-ink); text-decoration: none; line-height: 1.1;
+    white-space: nowrap; margin-right: 20px;
   }
   .brand img { width: 50px; height: 50px; object-fit: contain; }
   .brand small {
@@ -104,8 +105,8 @@
     font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
     text-transform: uppercase; color: var(--gold-deep);
   }
-  nav ul { list-style: none; display: flex; gap: 26px; }
-  nav a.nav-link { text-decoration: none; font-weight: 600; font-size: 15px; color: var(--ink); }
+  nav ul { list-style: none; display: flex; gap: 20px; }
+  nav a.nav-link { text-decoration: none; font-weight: 600; font-size: 14.5px; color: var(--ink); white-space: nowrap; }
   nav a.nav-link:hover { color: var(--blue); }
   .nav-cta {
     background: var(--blue); color: #fff !important;
@@ -113,7 +114,22 @@
     text-decoration: none; font-size: 15px; white-space: nowrap;
   }
   .nav-cta:hover { background: var(--blue-deep); }
-  @media (max-width: 880px) { nav ul.nav-links { display: none; } }
+  .nav-actions { display: flex; align-items: center; gap: 10px; }
+  .nav-give {
+    background: var(--gold); color: var(--blue-ink) !important;
+    padding: 10px 18px; border-radius: 6px; font-weight: 800;
+    text-decoration: none; font-size: 15px; white-space: nowrap;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  }
+  .nav-give:hover { background: #FFDE55; }
+  @media (max-width: 1100px) { nav ul.nav-links { display: none; } }
+  @media (max-width: 620px) {
+    .nav-cta { display: none; }
+    .brand small { display: none; }
+    .brand { font-size: 17px; }
+    .brand img { width: 40px; height: 40px; }
+    .nav-give { padding: 9px 15px; font-size: 14.5px; }
+  }
 
   /* ---------- HERO ---------- */
   .hero { padding: 60px 0 46px; }
@@ -141,6 +157,12 @@
   .btn-outline:hover { background: rgba(0,82,155,0.07); }
   .btn-gold { background: var(--gold); color: var(--blue-ink); }
   .btn-gold:hover { background: #FFDE55; }
+
+  .btn-give { font-size: 16px; padding: 15px 26px; }
+  .hero-give-note {
+    margin-top: 14px; font-size: 13.5px; font-weight: 600;
+    color: var(--ink-soft); letter-spacing: 0.01em;
+  }
 
   .hero-badge { text-align: center; }
   .hero-badge img { width: 100%; max-width: 330px; margin: 0 auto; }
@@ -385,7 +407,10 @@
       <li><a class="nav-link" href="#give">Give</a></li>
       <li><a class="nav-link" href="#join">Join Us</a></li>
     </ul>
-    <a href="#join" class="nav-cta">Visit a Meeting</a>
+    <div class="nav-actions">
+      <a href="https://www.paypal.com/donate/?hosted_button_id=FU5EFC6DERBBW" target="_blank" rel="noopener" class="nav-give">Donate</a>
+      <a href="#join" class="nav-cta">Visit a Meeting</a>
+    </div>
   </div>
 </nav>
 
@@ -396,10 +421,11 @@
       <h1>We meet.<br>We serve.<br><span>We show up.</span></h1>
       <p class="lede">For 95 years the Kilgore Lions Club has brought neighbors together over lunch, raised money that stays right here in town, and put in the work our community needs. New faces are always welcome at the table.</p>
       <div class="hero-actions">
+        <a href="https://www.paypal.com/donate/?hosted_button_id=FU5EFC6DERBBW" target="_blank" rel="noopener" class="btn btn-gold btn-give">Donate to the Club</a>
         <a href="#lunch" class="btn btn-primary">Come to Thursday Lunch</a>
-        <a href="raffle.html" class="btn btn-gold">Win Big: See the Raffle</a>
-        <a href="#events" class="btn btn-outline">See Upcoming Events</a>
+        <a href="raffle.html" class="btn btn-outline">See the Raffle</a>
       </div>
+      <p class="hero-give-note">PayPal or Venmo &middot; Kilgore Lions Club Charities, a 501(c)(3)</p>
     </div>
     <div class="hero-badge">
       <img alt="Lions Clubs International emblem" src="./lci-emblem.png">
