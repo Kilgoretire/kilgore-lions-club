@@ -9,375 +9,377 @@
 <meta property="og:type" content="website">
 <link rel="icon" href="./lci-emblem.png">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Public+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Public+Sans:wght@400;500;600;700;800&display=swap');
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-  :root {
-    --blue: #00529B;
-    --blue-deep: #003A6E;
-    --blue-ink: #002548;
-    --gold: #FFCF06;
-    --gold-deep: #D9A800;
-    --purple: #5B2A86;
-    --cream: #FAF6EC;
-    --paper: #FFFFFF;
-    --ink: #21201C;
-    --ink-soft: #55534B;
-    --line: #E2DCCB;
-  }
+:root {
+--blue: #00529B;
+--blue-deep: #003A6E;
+--blue-ink: #002548;
+--gold: #FFCF06;
+--gold-deep: #D9A800;
+--purple: #5B2A86;
+--cream: #FAF6EC;
+--paper: #FFFFFF;
+--ink: #21201C;
+--ink-soft: #55534B;
+--line: #E2DCCB;
+}
 
-  html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 
-  /* ---------- ANNOUNCEMENT BAR ---------- */
-  .announce {
-    display: block; text-decoration: none;
-    background: var(--gold); color: var(--blue-ink);
-    border-bottom: 3px solid var(--gold-deep);
-  }
-  .announce:hover { background: #FFDE55; }
-  .announce-inner {
-    max-width: 1080px; margin: 0 auto; padding: 11px 28px;
-    display: flex; align-items: center; justify-content: center;
-    gap: 10px 16px; flex-wrap: wrap; text-align: center;
-  }
-  .announce .pill {
-    background: var(--blue-ink); color: var(--gold);
-    font-size: 11px; font-weight: 800; letter-spacing: 0.1em;
-    text-transform: uppercase; padding: 4px 11px; border-radius: 100px;
-    white-space: nowrap;
-  }
-  .announce .msg { font-weight: 700; font-size: 15.5px; }
-  .announce .sub { font-weight: 600; font-size: 15px; opacity: 0.78; }
-  .announce .go { font-weight: 800; font-size: 15px; white-space: nowrap; }
-  @media (max-width: 700px) {
-    .announce-inner { padding: 9px 16px; gap: 4px 8px; }
-    .announce .msg { font-size: 14.5px; }
-    .announce .sub, .announce .long { display: none; }
-    .announce .go { font-size: 14px; }
-    .announce .pill { font-size: 10px; padding: 3px 9px; }
-  }
+/* ---------- ANNOUNCEMENT BAR ---------- */
+.announce {
+display: block; text-decoration: none;
+background: var(--gold); color: var(--blue-ink);
+border-bottom: 3px solid var(--gold-deep);
+}
+.announce:hover { background: #FFDE55; }
+.announce-inner {
+max-width: 1080px; margin: 0 auto; padding: 11px 28px;
+display: flex; align-items: center; justify-content: center;
+gap: 10px 16px; flex-wrap: wrap; text-align: center;
+}
+.announce .pill {
+background: var(--blue-ink); color: var(--gold);
+font-size: 11px; font-weight: 800; letter-spacing: 0.1em;
+text-transform: uppercase; padding: 4px 11px; border-radius: 100px;
+white-space: nowrap;
+}
+.announce .msg { font-weight: 700; font-size: 15.5px; }
+.announce .sub { font-weight: 600; font-size: 15px; opacity: 0.78; }
+.announce .go { font-weight: 800; font-size: 15px; white-space: nowrap; }
+@media (max-width: 700px) {
+.announce-inner { padding: 9px 16px; gap: 4px 8px; }
+.announce .msg { font-size: 14.5px; }
+.announce .sub, .announce .long { display: none; }
+.announce .go { font-size: 14px; }
+.announce .pill { font-size: 10px; padding: 3px 9px; }
+}
 
-  body {
-    background: var(--cream);
-    color: var(--ink);
-    font-family: 'Public Sans', system-ui, sans-serif;
-    font-size: 18px;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
+body {
+background: var(--cream);
+color: var(--ink);
+font-family: 'Public Sans', system-ui, sans-serif;
+font-size: 18px;
+line-height: 1.65;
+-webkit-font-smoothing: antialiased;
+}
 
-  h1, h2, h3, h4 {
-    font-family: 'Fraunces', Georgia, serif;
-    font-weight: 700;
-    color: var(--blue-ink);
-    line-height: 1.15;
-  }
+h1, h2, h3, h4 {
+font-family: 'Fraunces', Georgia, serif;
+font-weight: 700;
+color: var(--blue-ink);
+line-height: 1.15;
+}
 
-  a { color: inherit; }
-  img { display: block; max-width: 100%; }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
 
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
 
-  .skip { position: absolute; left: -9999px; background: var(--blue); color: #fff; padding: 10px 16px; z-index: 200; }
-  .skip:focus { left: 12px; top: 12px; }
+.skip { position: absolute; left: -9999px; background: var(--blue); color: #fff; padding: 10px 16px; z-index: 200; }
+.skip:focus { left: 12px; top: 12px; }
 
-  /* ---------- NAV ---------- */
-  nav {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(250,246,236,0.94);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--line);
-  }
-  .nav-inner {
-    max-width: 1080px; margin: 0 auto; padding: 10px 28px;
-    display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  }
-  .brand {
-    display: flex; align-items: center; gap: 12px;
-    font-family: 'Fraunces', serif; font-weight: 700; font-size: 19px;
-    color: var(--blue-ink); text-decoration: none; line-height: 1.1;
-    white-space: nowrap; margin-right: 20px;
-  }
-  .brand img { width: 50px; height: 50px; object-fit: contain; }
-  .brand small {
-    display: block; font-family: 'Public Sans', sans-serif;
-    font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--gold-deep);
-  }
-  nav ul { list-style: none; display: flex; gap: 20px; }
-  nav a.nav-link { text-decoration: none; font-weight: 600; font-size: 14.5px; color: var(--ink); white-space: nowrap; }
-  nav a.nav-link:hover { color: var(--blue); }
-  .nav-cta {
-    background: var(--blue); color: #fff !important;
-    padding: 10px 18px; border-radius: 6px; font-weight: 700;
-    text-decoration: none; font-size: 15px; white-space: nowrap;
-  }
-  .nav-cta:hover { background: var(--blue-deep); }
-  .nav-actions { display: flex; align-items: center; gap: 10px; }
-  .nav-give {
-    background: var(--gold); color: var(--blue-ink) !important;
-    padding: 10px 18px; border-radius: 6px; font-weight: 800;
-    text-decoration: none; font-size: 15px; white-space: nowrap;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.06);
-  }
-  .nav-give:hover { background: #FFDE55; }
-  @media (max-width: 1100px) { nav ul.nav-links { display: none; } }
-  @media (max-width: 620px) {
-    .nav-cta { display: none; }
-    .brand small { display: none; }
-    .brand { font-size: 17px; }
-    .brand img { width: 40px; height: 40px; }
-    .nav-give { padding: 9px 15px; font-size: 14.5px; }
-  }
+/* ---------- NAV ---------- */
+nav {
+position: sticky; top: 0; z-index: 50;
+background: rgba(250,246,236,0.94);
+backdrop-filter: blur(8px);
+border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+max-width: 1080px; margin: 0 auto; padding: 10px 28px;
+display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.brand {
+display: flex; align-items: center; gap: 12px;
+font-family: 'Fraunces', serif; font-weight: 700; font-size: 19px;
+color: var(--blue-ink); text-decoration: none; line-height: 1.1;
+white-space: nowrap; margin-right: 20px;
+}
+.brand img { width: 50px; height: 50px; object-fit: contain; }
+.brand small {
+display: block; font-family: 'Public Sans', sans-serif;
+font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+text-transform: uppercase; color: var(--gold-deep);
+}
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a.nav-link { text-decoration: none; font-weight: 600; font-size: 14.5px; color: var(--ink); white-space: nowrap; }
+nav a.nav-link:hover { color: var(--blue); }
+.nav-cta {
+background: var(--blue); color: #fff !important;
+padding: 10px 18px; border-radius: 6px; font-weight: 700;
+text-decoration: none; font-size: 15px; white-space: nowrap;
+}
+.nav-cta:hover { background: var(--blue-deep); }
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+.nav-give {
+background: var(--gold); color: var(--blue-ink) !important;
+padding: 10px 18px; border-radius: 6px; font-weight: 800;
+text-decoration: none; font-size: 15px; white-space: nowrap;
+box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+.nav-give:hover { background: #FFDE55; }
+@media (max-width: 1100px) { nav ul.nav-links { display: none; } }
+@media (max-width: 620px) {
+.nav-cta { display: none; }
+.brand small { display: none; }
+.brand { font-size: 17px; }
+.brand img { width: 40px; height: 40px; }
+.nav-give { padding: 9px 15px; font-size: 14.5px; }
+}
 
-  /* ---------- HERO ---------- */
-  .hero { padding: 60px 0 46px; }
-  .hero-inner { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center; }
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 12.5px; font-weight: 800; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--blue);
-    background: rgba(0,82,155,0.09);
-    padding: 6px 13px; border-radius: 100px; margin-bottom: 20px;
-  }
-  .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
-  .hero h1 { font-size: 54px; margin-bottom: 18px; }
-  .hero h1 span { color: var(--blue); }
-  .hero p.lede { font-size: 19px; color: var(--ink-soft); max-width: 46ch; margin-bottom: 28px; }
-  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-  .btn {
-    display: inline-block; padding: 14px 24px; border-radius: 6px;
-    font-weight: 700; font-size: 15px; text-decoration: none;
-    border: 2px solid transparent; cursor: pointer;
-  }
-  .btn-primary { background: var(--blue); color: #fff; }
-  .btn-primary:hover { background: var(--blue-deep); }
-  .btn-outline { border-color: var(--blue); color: var(--blue); }
-  .btn-outline:hover { background: rgba(0,82,155,0.07); }
-  .btn-gold { background: var(--gold); color: var(--blue-ink); }
-  .btn-gold:hover { background: #FFDE55; }
+/* ---------- HERO ---------- */
+.hero { padding: 60px 0 46px; }
+.hero-inner { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center; }
+.eyebrow {
+display: inline-flex; align-items: center; gap: 8px;
+font-size: 12.5px; font-weight: 800; letter-spacing: 0.12em;
+text-transform: uppercase; color: var(--blue);
+background: rgba(0,82,155,0.09);
+padding: 6px 13px; border-radius: 100px; margin-bottom: 20px;
+}
+.eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+.hero h1 { font-size: 54px; margin-bottom: 18px; }
+.hero h1 span { color: var(--blue); }
+.hero p.lede { font-size: 19px; color: var(--ink-soft); max-width: 46ch; margin-bottom: 28px; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn {
+display: inline-block; padding: 14px 24px; border-radius: 6px;
+font-weight: 700; font-size: 15px; text-decoration: none;
+border: 2px solid transparent; cursor: pointer;
+}
+.btn-primary { background: var(--blue); color: #fff; }
+.btn-primary:hover { background: var(--blue-deep); }
+.btn-outline { border-color: var(--blue); color: var(--blue); }
+.btn-outline:hover { background: rgba(0,82,155,0.07); }
+.btn-gold { background: var(--gold); color: var(--blue-ink); }
+.btn-gold:hover { background: #FFDE55; }
 
-  .btn-give { font-size: 16px; padding: 15px 26px; }
-  .hero-give-note {
-    margin-top: 14px; font-size: 13.5px; font-weight: 600;
-    color: var(--ink-soft); letter-spacing: 0.01em;
-  }
+.btn-give { font-size: 16px; padding: 15px 26px; }
+.hero-give-note {
+margin-top: 14px; font-size: 13.5px; font-weight: 600;
+color: var(--ink-soft); letter-spacing: 0.01em;
+}
 
-  .hero-badge { text-align: center; }
-  .hero-badge img { width: 100%; max-width: 330px; margin: 0 auto; }
-  .hero-badge .cap {
-    margin-top: 14px; font-size: 13px; font-weight: 800;
-    letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-soft);
-  }
-  @media (max-width: 880px) {
-    .hero-inner { grid-template-columns: 1fr; gap: 32px; }
-    .hero h1 { font-size: 38px; }
-    .hero-badge img { max-width: 200px; }
-  }
+.hero-badge { text-align: center; }
+.hero-badge img { width: 100%; max-width: 330px; margin: 0 auto; }
+.hero-badge .cap {
+margin-top: 14px; font-size: 13px; font-weight: 800;
+letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-soft);
+}
+@media (max-width: 880px) {
+.hero-inner { grid-template-columns: 1fr; gap: 32px; }
+.hero h1 { font-size: 38px; }
+.hero-badge img { max-width: 200px; }
+}
 
-  /* ---------- BULLETIN ---------- */
-  .bulletin-section { padding: 8px 0 56px; }
-  .bulletin {
-    background: var(--paper); border: 1px solid var(--line);
-    border-left: 6px solid var(--gold); border-radius: 10px;
-    padding: 28px 32px;
-    display: grid; grid-template-columns: auto 1fr auto; gap: 28px; align-items: center;
-  }
-  .bulletin .when { text-align: center; background: var(--cream); border-radius: 8px; padding: 14px 20px; min-width: 108px; }
-  .bulletin .when .day { font-family: 'Fraunces', serif; font-weight: 900; font-size: 26px; color: var(--blue); }
-  .bulletin .when .time { font-size: 13px; color: var(--ink-soft); font-weight: 600; }
-  .bulletin .tag {
-    font-size: 11.5px; font-weight: 800; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--gold-deep); margin-bottom: 6px;
-  }
-  .bulletin h3 { font-size: 23px; margin-bottom: 6px; }
-  .bulletin p { color: var(--ink-soft); font-size: 16px; }
-  @media (max-width: 800px) {
-    .bulletin { grid-template-columns: 1fr; }
-    .bulletin .when { justify-self: start; }
-  }
+/* ---------- BULLETIN ---------- */
+.bulletin-section { padding: 8px 0 56px; }
+.bulletin {
+background: var(--paper); border: 1px solid var(--line);
+border-left: 6px solid var(--gold); border-radius: 10px;
+padding: 28px 32px;
+display: grid; grid-template-columns: auto 1fr auto; gap: 28px; align-items: center;
+}
+.bulletin .when { text-align: center; background: var(--cream); border-radius: 8px; padding: 14px 20px; min-width: 108px; }
+.bulletin .when .day { font-family: 'Fraunces', serif; font-weight: 900; font-size: 26px; color: var(--blue); }
+.bulletin .when .time { font-size: 13px; color: var(--ink-soft); font-weight: 600; }
+.bulletin .tag {
+font-size: 11.5px; font-weight: 800; letter-spacing: 0.1em;
+text-transform: uppercase; color: var(--gold-deep); margin-bottom: 6px;
+}
+.bulletin h3 { font-size: 23px; margin-bottom: 6px; }
+.bulletin p { color: var(--ink-soft); font-size: 16px; }
+@media (max-width: 800px) {
+.bulletin { grid-template-columns: 1fr; }
+.bulletin .when { justify-self: start; }
+}
 
-  /* ---------- LUNCH SCHEDULE ---------- */
-  .lunch-list { display: flex; flex-direction: column; gap: 12px; }
-  .lunch-row {
-    display: grid; grid-template-columns: 88px 1fr; gap: 20px; align-items: start;
-    background: var(--cream); border: 1px solid var(--line);
-    border-radius: 12px; padding: 18px 20px;
-  }
-  .lunch-row.next { background: var(--paper); border-left: 6px solid var(--gold); }
-  .lunch-date {
-    text-align: center; background: var(--paper); border: 1px solid var(--line);
-    border-radius: 8px; padding: 9px 0 7px;
-  }
-  .lunch-row.next .lunch-date { background: var(--cream); }
-  .lunch-date .mon {
-    display: block; font-family: 'Public Sans', sans-serif; font-size: 11px;
-    font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep);
-  }
-  .lunch-date .num {
-    display: block; font-family: 'Fraunces', serif; font-weight: 900;
-    font-size: 28px; line-height: 1.15; color: var(--blue);
-  }
-  .lunch-badge {
-    display: inline-block; background: var(--gold); color: var(--blue-ink);
-    font-family: 'Public Sans', sans-serif; font-size: 10.5px; font-weight: 800;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 4px 9px; border-radius: 100px; margin-bottom: 9px;
-  }
-  .lunch-body h4 { font-size: 19px; margin-bottom: 5px; }
-  .lunch-body h4 .org {
-    display: block; font-family: 'Public Sans', sans-serif; font-size: 13px;
-    font-weight: 600; color: var(--ink-soft); margin-top: 3px;
-  }
-  .lunch-body .menu { font-size: 15.5px; color: var(--ink-soft); }
-  .lunch-body .cater { font-size: 13.5px; color: var(--ink-soft); opacity: 0.75; margin-top: 5px; }
-  .lunch-row.pending .lunch-body h4 { color: var(--ink-soft); font-weight: 600; }
-  .lunch-row[hidden] { display: none; }
-  .lunch-empty { background: var(--cream); border: 1px dashed var(--line); border-radius: 12px; padding: 20px; color: var(--ink-soft); font-size: 16px; }
-  .lunch-note { margin-top: 22px; font-size: 15px; color: var(--ink-soft); }
-  .lunch-note a { color: var(--blue); font-weight: 600; text-decoration: none; }
-  .lunch-note a:hover { text-decoration: underline; }
-  @media (max-width: 640px) {
-    .lunch-row { grid-template-columns: 64px 1fr; gap: 14px; padding: 15px 16px; }
-    .lunch-date .num { font-size: 22px; }
-    .lunch-body h4 { font-size: 17px; }
-  }
+/* ---------- LUNCH SCHEDULE ---------- */
+.lunch-list { display: flex; flex-direction: column; gap: 12px; }
+.lunch-row {
+display: grid; grid-template-columns: 88px 1fr; gap: 20px; align-items: start;
+background: var(--cream); border: 1px solid var(--line);
+border-radius: 12px; padding: 18px 20px;
+}
+.lunch-row.next { background: var(--paper); border-left: 6px solid var(--gold); }
+.lunch-date {
+text-align: center; background: var(--paper); border: 1px solid var(--line);
+border-radius: 8px; padding: 9px 0 7px;
+}
+.lunch-row.next .lunch-date { background: var(--cream); }
+.lunch-date .mon {
+display: block; font-family: 'Public Sans', sans-serif; font-size: 11px;
+font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep);
+}
+.lunch-date .num {
+display: block; font-family: 'Fraunces', serif; font-weight: 900;
+font-size: 28px; line-height: 1.15; color: var(--blue);
+}
+.lunch-badge {
+display: inline-block; background: var(--gold); color: var(--blue-ink);
+font-family: 'Public Sans', sans-serif; font-size: 10.5px; font-weight: 800;
+letter-spacing: 0.08em; text-transform: uppercase;
+padding: 4px 9px; border-radius: 100px; margin-bottom: 9px;
+}
+.lunch-body h4 { font-size: 19px; margin-bottom: 5px; }
+.lunch-body h4 .org {
+display: block; font-family: 'Public Sans', sans-serif; font-size: 13px;
+font-weight: 600; color: var(--ink-soft); margin-top: 3px;
+}
+.lunch-body .menu { font-size: 15.5px; color: var(--ink-soft); }
+.lunch-body .cater { font-size: 13.5px; color: var(--ink-soft); opacity: 0.75; margin-top: 5px; }
+.lunch-row.pending .lunch-body h4 { color: var(--ink-soft); font-weight: 600; }
+.lunch-row[hidden] { display: none; }
+.lunch-empty { background: var(--cream); border: 1px dashed var(--line); border-radius: 12px; padding: 20px; color: var(--ink-soft); font-size: 16px; }
+.lunch-note { margin-top: 22px; font-size: 15px; color: var(--ink-soft); }
+.lunch-note a { color: var(--blue); font-weight: 600; text-decoration: none; }
+.lunch-note a:hover { text-decoration: underline; }
+@media (max-width: 640px) {
+.lunch-row { grid-template-columns: 64px 1fr; gap: 14px; padding: 15px 16px; }
+.lunch-date .num { font-size: 22px; }
+.lunch-body h4 { font-size: 17px; }
+}
 
-  /* ---------- SECTIONS ---------- */
-  .section { padding: 60px 0; }
-  .section-alt { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .section-head { margin-bottom: 34px; max-width: 62ch; }
-  .section-head h2 { font-size: 34px; }
-  .section-head p { color: var(--ink-soft); margin-top: 10px; font-size: 17px; }
+/* ---------- SECTIONS ---------- */
+.section { padding: 60px 0; }
+.section-alt { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-head { margin-bottom: 34px; max-width: 62ch; }
+.section-head h2 { font-size: 34px; }
+.section-head p { color: var(--ink-soft); margin-top: 10px; font-size: 17px; }
 
-  /* ---------- EVENTS ---------- */
-  .events-grid { display: grid; grid-template-columns: 0.95fr 1.35fr; gap: 24px; }
-  .event-feature {
-    background: var(--blue-deep); color: #fff;
-    border-radius: 14px; padding: 34px; position: relative; overflow: hidden;
-  }
-  .event-feature::after {
-    content: ""; position: absolute; top: -70px; right: -70px;
-    width: 210px; height: 210px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,207,6,0.26), transparent 70%);
-  }
-  .event-feature .tag {
-    display: inline-block; background: var(--gold); color: var(--blue-ink);
-    font-weight: 800; font-size: 11.5px; letter-spacing: 0.08em;
-    text-transform: uppercase; padding: 6px 12px; border-radius: 100px; margin-bottom: 16px;
-  }
-  .event-feature h3 { font-size: 32px; color: #fff; margin-bottom: 10px; }
-  .event-feature .date-line { font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 12px; }
-  .event-feature p { color: rgba(255,255,255,0.85); font-size: 16px; margin-bottom: 18px; max-width: 42ch; }
-  .prize {
-    display: flex; gap: 10px; align-items: flex-start;
-    background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.20);
-    border-radius: 8px; padding: 14px 16px; margin-bottom: 22px;
-    font-size: 14.5px; color: #fff; position: relative; z-index: 1;
-  }
-  .prize strong { color: var(--gold); }
+/* ---------- EVENTS ---------- */
+.events-grid { display: grid; grid-template-columns: 0.95fr 1.35fr; gap: 24px; }
+.event-feature {
+background: var(--blue-deep); color: #fff;
+border-radius: 14px; padding: 34px; position: relative; overflow: hidden;
+}
+.event-feature::after {
+content: ""; position: absolute; top: -70px; right: -70px;
+width: 210px; height: 210px; border-radius: 50%;
+background: radial-gradient(circle, rgba(255,207,6,0.26), transparent 70%);
+}
+.event-feature .tag {
+display: inline-block; background: var(--gold); color: var(--blue-ink);
+font-weight: 800; font-size: 11.5px; letter-spacing: 0.08em;
+text-transform: uppercase; padding: 6px 12px; border-radius: 100px; margin-bottom: 16px;
+}
+.event-feature h3 { font-size: 32px; color: #fff; margin-bottom: 10px; }
+.event-feature .date-line { font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 12px; }
+.event-feature p { color: rgba(255,255,255,0.85); font-size: 16px; margin-bottom: 18px; max-width: 42ch; }
+.prize {
+display: flex; gap: 10px; align-items: flex-start;
+background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.20);
+border-radius: 8px; padding: 14px 16px; margin-bottom: 22px;
+font-size: 14.5px; color: #fff; position: relative; z-index: 1;
+}
+.prize strong { color: var(--gold); }
 
-  .event-side { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
-  .event-card {
-    background: var(--paper); border: 1px solid var(--line);
-    border-radius: 12px; padding: 16px; flex: 0 0 auto;
-    display: flex; gap: 16px; align-items: center;
-    grid-column: span 2;
-  }
-  .event-card img { width: 92px; height: 92px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
-  .event-card img.emblem { object-fit: contain; border-radius: 0; }
-  .event-card.photo {
-    grid-column: span 1;
-    flex-direction: column; align-items: stretch; padding: 0; overflow: hidden;
-  }
-  .event-card.photo img { width: 100%; height: 150px; object-fit: cover; border-radius: 0; }
-  .event-card.photo .gallery { display: flex; gap: 2px; }
-  .event-card.photo .gallery img { height: 110px; flex: 1 1 50%; }
-  .event-card.photo .body { padding: 16px 18px 18px; }
-  .event-card .month {
-    font-size: 11.5px; font-weight: 800; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--blue); margin-bottom: 4px;
-  }
-  .event-card h4 { font-size: 19px; margin-bottom: 4px; }
-  .event-card p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.5; }
-  .event-card .more-link { display: inline-block; margin-top: 8px; color: var(--blue); font-weight: 700; font-size: 13.5px; text-decoration: none; }
-  .event-card .more-link:hover { text-decoration: underline; }
-  @media (max-width: 880px) {
-    .events-grid { grid-template-columns: 1fr; }
-    .event-side { grid-template-columns: 1fr; }
-    .event-card, .event-card.photo { grid-column: span 1; }
-  }
+.event-side { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.event-card {
+background: var(--paper); border: 1px solid var(--line);
+border-radius: 12px; padding: 16px; flex: 0 0 auto;
+display: flex; gap: 16px; align-items: center;
+grid-column: span 2;
+}
+.event-card img { width: 92px; height: 92px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+.event-card img.emblem { object-fit: contain; border-radius: 0; }
+.event-card.photo {
+grid-column: span 1;
+flex-direction: column; align-items: stretch; padding: 0; overflow: hidden;
+}
+.event-card.photo img { width: 100%; height: 150px; object-fit: cover; border-radius: 0; }
+.event-card.photo .gallery { display: flex; gap: 2px; }
+.event-card.photo .gallery img { height: 110px; flex: 1 1 50%; }
+.event-card.photo .body { padding: 16px 18px 18px; }
+.event-card .month {
+font-size: 11.5px; font-weight: 800; letter-spacing: 0.08em;
+text-transform: uppercase; color: var(--blue); margin-bottom: 4px;
+}
+.event-card h4 { font-size: 19px; margin-bottom: 4px; }
+.event-card p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.5; }
+.event-card .more-link { display: inline-block; margin-top: 8px; color: var(--blue); font-weight: 700; font-size: 13.5px; text-decoration: none; }
+.event-card .more-link:hover { text-decoration: underline; }
+@media (max-width: 880px) {
+.events-grid { grid-template-columns: 1fr; }
+.event-side { grid-template-columns: 1fr; }
+.event-card, .event-card.photo { grid-column: span 1; }
+}
 
-  /* ---------- SERVICE ---------- */
-  .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .service-card { background: var(--cream); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
-  .service-card img { width: 100%; aspect-ratio: 1; object-fit: cover; }
-  .service-card .body { padding: 20px; }
-  .service-card h4 { font-size: 18px; margin-bottom: 6px; }
-  .service-card p { font-size: 14.5px; color: var(--ink-soft); }
-  @media (max-width: 820px) { .service-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 540px) { .service-grid { grid-template-columns: 1fr; } }
+/* ---------- SERVICE ---------- */
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.service-card { background: var(--cream); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.service-card img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.service-card .body { padding: 20px; }
+.service-card h4 { font-size: 18px; margin-bottom: 6px; }
+.service-card p { font-size: 14.5px; color: var(--ink-soft); }
+@media (max-width: 820px) { .service-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .service-grid { grid-template-columns: 1fr; } }
 
-  /* ---------- BOARD ---------- */
-  .board-figure { border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: var(--paper); }
-  .board-figure img { width: 100%; }
-  .board-figure figcaption { padding: 16px 20px; font-size: 14.5px; color: var(--ink-soft); border-top: 1px solid var(--line); }
+/* ---------- BOARD ---------- */
+.board-figure { border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: var(--paper); }
+.board-figure img { width: 100%; }
+.board-figure figcaption { padding: 16px 20px; font-size: 14.5px; color: var(--ink-soft); border-top: 1px solid var(--line); }
 
-  /* ---------- JOIN ---------- */
-  .join {
-    background: var(--blue); color: #fff; border-radius: 16px; padding: 44px;
-    display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; align-items: center;
-  }
-  .join h2 { color: #fff; font-size: 30px; margin-bottom: 12px; }
-  .join p { color: rgba(255,255,255,0.90); font-size: 16px; }
-  .join-box { background: rgba(255,255,255,0.11); border: 1px solid rgba(255,255,255,0.24); border-radius: 12px; padding: 24px; }
-  .join-box h4 { font-family: 'Fraunces', serif; color: #fff; font-size: 18px; margin-bottom: 10px; }
-  .join-box p { font-size: 14.5px; margin-bottom: 16px; }
-  @media (max-width: 800px) { .join { grid-template-columns: 1fr; padding: 30px; } }
+/* ---------- JOIN ---------- */
+.join {
+background: var(--blue); color: #fff; border-radius: 16px; padding: 44px;
+display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; align-items: center;
+}
+.join h2 { color: #fff; font-size: 30px; margin-bottom: 12px; }
+.join p { color: rgba(255,255,255,0.90); font-size: 16px; }
+.join-box { background: rgba(255,255,255,0.11); border: 1px solid rgba(255,255,255,0.24); border-radius: 12px; padding: 24px; }
+.join-box h4 { font-family: 'Fraunces', serif; color: #fff; font-size: 18px; margin-bottom: 10px; }
+.join-box p { font-size: 14.5px; margin-bottom: 16px; }
+@media (max-width: 800px) { .join { grid-template-columns: 1fr; padding: 30px; } }
+.join-video { max-width: 760px; margin: 32px auto 0; }
+.join-video video { width: 100%; display: block; border-radius: 14px; border: 1px solid var(--line); background: #000; }
+.join-video-cap { margin-top: 10px; font-size: 14.5px; color: var(--ink-soft); text-align: center; }
 
+/* ---------- GIVE ---------- */
+.give-band {
+background: var(--cream); border: 1px solid var(--line); border-radius: 16px;
+padding: 40px; display: grid; grid-template-columns: 1.25fr 1fr;
+gap: 36px; align-items: center;
+}
+.give-band h2 { font-size: 32px; margin-bottom: 12px; }
+.give-band p { color: var(--ink-soft); font-size: 17px; }
+.give-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
+.give-methods { font-size: 14.5px; font-weight: 600; color: var(--ink-soft); }
+.give-fine { font-size: 13.5px !important; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+.give-side { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+.give-side h4 { font-family: 'Fraunces', serif; font-size: 18px; margin-bottom: 10px; }
+.give-side p { font-size: 14.5px; }
+.give-side .give-addr { margin-top: 12px; font-size: 14.5px; line-height: 1.5; font-weight: 600; color: var(--ink); }
+@media (max-width: 800px) { .give-band { grid-template-columns: 1fr; padding: 28px; } }
 
-  /* ---------- GIVE ---------- */
-  .give-band {
-    background: var(--cream); border: 1px solid var(--line); border-radius: 16px;
-    padding: 40px; display: grid; grid-template-columns: 1.25fr 1fr;
-    gap: 36px; align-items: center;
-  }
-  .give-band h2 { font-size: 32px; margin-bottom: 12px; }
-  .give-band p { color: var(--ink-soft); font-size: 17px; }
-  .give-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
-  .give-methods { font-size: 14.5px; font-weight: 600; color: var(--ink-soft); }
-  .give-fine { font-size: 13.5px !important; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
-  .give-side { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
-  .give-side h4 { font-family: 'Fraunces', serif; font-size: 18px; margin-bottom: 10px; }
-  .give-side p { font-size: 14.5px; }
-  .give-side .give-addr { margin-top: 12px; font-size: 14.5px; line-height: 1.5; font-weight: 600; color: var(--ink); }
-  @media (max-width: 800px) { .give-band { grid-template-columns: 1fr; padding: 28px; } }
-
-  /* ---------- FOOTER ---------- */
-  footer { padding: 46px 0 40px; border-top: 1px solid var(--line); margin-top: 20px; }
-  .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 28px; font-size: 14px; color: var(--ink-soft); }
-  .footer-brand-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
-  .footer-brand-row img { width: 40px; height: 40px; object-fit: contain; }
-  .footer-brand { font-family: 'Fraunces', serif; font-weight: 700; color: var(--blue-ink); font-size: 17px; }
-  .meet-line { margin-bottom: 14px; }
-  .addr-block { display: flex; gap: 36px; flex-wrap: wrap; }
-  .addr { font-size: 14px; line-height: 1.5; }
-  .mail-link { color: var(--blue); text-decoration: none; font-weight: 600; }
-  .mail-link:hover { text-decoration: underline; }
-  .addr h6 {
-    font-family: 'Public Sans', sans-serif; font-size: 11px; font-weight: 800;
-    letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); margin-bottom: 4px;
-  }
-  footer .cols { display: flex; gap: 52px; flex-wrap: wrap; }
-  footer .col h5 {
-    font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.08em;
-    color: var(--ink); margin-bottom: 10px; font-weight: 800; font-family: 'Public Sans', sans-serif;
-  }
-  footer .col a { display: block; text-decoration: none; color: var(--ink-soft); margin-bottom: 8px; }
-  footer .col a:hover { color: var(--blue); }
-  .legal { text-align: center; font-size: 12px; color: var(--ink-soft); margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+/* ---------- FOOTER ---------- */
+footer { padding: 46px 0 40px; border-top: 1px solid var(--line); margin-top: 20px; }
+.footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 28px; font-size: 14px; color: var(--ink-soft); }
+.footer-brand-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.footer-brand-row img { width: 40px; height: 40px; object-fit: contain; }
+.footer-brand { font-family: 'Fraunces', serif; font-weight: 700; color: var(--blue-ink); font-size: 17px; }
+.meet-line { margin-bottom: 14px; }
+.addr-block { display: flex; gap: 36px; flex-wrap: wrap; }
+.addr { font-size: 14px; line-height: 1.5; }
+.mail-link { color: var(--blue); text-decoration: none; font-weight: 600; }
+.mail-link:hover { text-decoration: underline; }
+.addr h6 {
+font-family: 'Public Sans', sans-serif; font-size: 11px; font-weight: 800;
+letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); margin-bottom: 4px;
+}
+footer .cols { display: flex; gap: 52px; flex-wrap: wrap; }
+footer .col h5 {
+font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.08em;
+color: var(--ink); margin-bottom: 10px; font-weight: 800; font-family: 'Public Sans', sans-serif;
+}
+footer .col a { display: block; text-decoration: none; color: var(--ink-soft); margin-bottom: 8px; }
+footer .col a:hover { color: var(--blue); }
+.legal { text-align: center; font-size: 12px; color: var(--ink-soft); margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
@@ -385,397 +387,445 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <a class="announce" href="raffle.html">
-  <div class="announce-inner">
-    <span class="pill">New</span>
-    <span class="msg">Halloween Carnival Raffle<span class="long"> · 6 great prizes</span></span>
-    <span class="sub">Tickets $5 each or 5 for $20 · Drawing October 31</span>
-    <span class="go">See the prizes →</span>
-  </div>
+<div class="announce-inner">
+<span class="pill">New</span>
+<span class="msg">Halloween Carnival Raffle<span class="long"> · 6 great prizes</span></span>
+<span class="sub">Tickets $5 each or 5 for $20 · Drawing October 31</span>
+<span class="go">See the prizes →</span>
+</div>
 </a>
 
 <nav>
-  <div class="nav-inner">
-    <a class="brand" href="#top">
-      <img class="emblem" alt="Lions Clubs International emblem" src="./lci-emblem.png">
-      <span>Kilgore Lions Club<small>Kilgore, Texas · Since 1931</small></span>
-    </a>
-    <ul class="nav-links">
-      <li><a class="nav-link" href="#lunches">Thursday Lunch</a></li>
-      <li><a class="nav-link" href="#events">Events</a></li>
-      <li><a class="nav-link" href="raffle.html">Raffle</a></li>
-      <li><a class="nav-link" href="#service">What We Do</a></li>
-      <li><a class="nav-link" href="#give">Give</a></li>
-      <li><a class="nav-link" href="#join">Join Us</a></li>
-    </ul>
-    <div class="nav-actions">
-      <a href="https://www.paypal.com/donate/?hosted_button_id=FU5EFC6DERBBW" target="_blank" rel="noopener" class="nav-give">Donate</a>
-      <a href="#join" class="nav-cta">Visit a Meeting</a>
-    </div>
-  </div>
+<div class="nav-inner">
+<a class="brand" href="#top">
+<img class="emblem" alt="Lions Clubs International emblem" src="./lci-emblem.png">
+<span>Kilgore Lions Club<small>Kilgore, Texas · Since 1931</small></span>
+</a>
+<ul class="nav-links">
+<li><a class="nav-link" href="#lunches">Thursday Lunch</a></li>
+<li><a class="nav-link" href="#events">Events</a></li>
+<li><a class="nav-link" href="raffle.html">Raffle</a></li>
+<li><a class="nav-link" href="#service">What We Do</a></li>
+<li><a class="nav-link" href="#give">Give</a></li>
+<li><a class="nav-link" href="#join">Join Us</a></li>
+</ul>
+<div class="nav-actions">
+<a href="https://www.paypal.com/donate/?hosted_button_id=FU5EFC6DERBBW" target="_blank" rel="noopener" class="nav-give">Donate</a>
+<a href="#join" class="nav-cta">Visit a Meeting</a>
+</div>
+</div>
 </nav>
 
 <header class="hero" id="top">
-  <div class="wrap hero-inner">
-    <div>
-      <div class="eyebrow"><span class="dot"></span>Serving Kilgore since 1931</div>
-      <h1>We meet.<br>We serve.<br><span>We show up.</span></h1>
-      <p class="lede">For 95 years the Kilgore Lions Club has brought neighbors together over lunch, raised money that stays right here in town, and put in the work our community needs. New faces are always welcome at the table.</p>
-      <div class="hero-actions">
-        <a href="https://www.paypal.com/donate/?hosted_button_id=FU5EFC6DERBBW" target="_blank" rel="noopener" class="btn btn-gold btn-give">Donate to the Club</a>
-        <a href="#lunch" class="btn btn-primary">Come to Thursday Lunch</a>
-        <a href="raffle.html" class="btn btn-outline">See the Raffle</a>
-      </div>
-      <p class="hero-give-note">PayPal or Venmo &middot; Kilgore Lions Club Charities, a 501(c)(3)</p>
-    </div>
-    <div class="hero-badge">
-      <img alt="Lions Clubs International emblem" src="./lci-emblem.png">
-      <div class="cap">95 Years of Service · 1931–2026</div>
-    </div>
-  </div>
+<div class="wrap hero-inner">
+<div>
+<div class="eyebrow"><span class="dot"></span>Serving Kilgore since 1931</div>
+<h1>We meet.<br>We serve.<br><span>We show up.</span></h1>
+<p class="lede">For 95 years the Kilgore Lions Club has brought neighbors together over lunch, raised money that stays right here in town, and put in the work our community needs. New faces are always welcome at the table.</p>
+<div class="hero-actions">
+<a href="https://www.paypal.com/donate/?hosted_button_id=FU5EFC6DERBBW" target="_blank" rel="noopener" class="btn btn-gold btn-give">Donate to the Club</a>
+<a href="#lunch" class="btn btn-primary">Come to Thursday Lunch</a>
+<a href="raffle.html" class="btn btn-outline">See the Raffle</a>
+</div>
+<p class="hero-give-note">PayPal or Venmo &middot; Kilgore Lions Club Charities, a 501(c)(3)</p>
+</div>
+<div class="hero-badge">
+<img alt="Lions Clubs International emblem" src="./lci-emblem.png">
+<div class="cap">95 Years of Service · 1931–2026</div>
+</div>
+</div>
 </header>
 
 <main id="main">
 
 <section class="bulletin-section" id="lunch">
-  <div class="wrap">
-    <div class="bulletin">
-      <div class="when">
-        <div class="day">THU</div>
-        <div class="time">12:00 PM</div>
-      </div>
-      <div>
-        <div class="tag">Every Week</div>
-        <h3>Come hungry. Come as you are.</h3>
-        <p>We meet every Thursday at noon. The menu and guest speaker for the weeks ahead are <a href="#lunches">posted right below</a>, and Charlotte and Wayne Gossage cook up something good every single week.</p>
-      </div>
-      <a href="https://groupme.com/join_group/116471191/upNUgMLu" target="_blank" rel="noopener" class="btn btn-primary">Get the Weekly Reminder</a>
-    </div>
-  </div>
+<div class="wrap">
+<div class="bulletin">
+<div class="when">
+<div class="day">THU</div>
+<div class="time">12:00 PM</div>
+</div>
+<div>
+<div class="tag">Every Week</div>
+<h3>Come hungry. Come as you are.</h3>
+<p>We meet every Thursday at noon. The menu and guest speaker for the weeks ahead are <a href="#lunches">posted right below</a>, and Charlotte and Wayne Gossage cook up something good every single week.</p>
+</div>
+<a href="https://groupme.com/join_group/116471191/upNUgMLu" target="_blank" rel="noopener" class="btn btn-primary">Get the Weekly Reminder</a>
+</div>
+</div>
 </section>
 
 <section class="section section-alt" id="lunches">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><span class="dot"></span>Thursdays at Noon</div>
-      <h2>Upcoming Lunches</h2>
-      <p>307 N. Rusk Street, $15 per person, home cooked every week. You do not have to be a member to eat with us — guests are always welcome, so bring a friend.</p>
-    </div>
-    <div class="lunch-list">
-      <article class="lunch-row" data-date="2026-08-27">
-        <div class="lunch-date"><span class="mon">AUG</span><span class="num">27</span></div>
-        <div class="lunch-body">
-          <h4>Willie Gooden<span class="org">Kilgore College Football Coach</span></h4>
-          <p class="menu">Menu coming soon.</p>
-        </div>
-      </article>
-      <article class="lunch-row" data-date="2026-09-03">
-        <div class="lunch-date"><span class="mon">SEP</span><span class="num">3</span></div>
-        <div class="lunch-body">
-          <h4>Grace Henderson, LPC<span class="org">Executive Director, Operation True North</span></h4>
-          <p class="menu">Menu coming soon.</p>
-        </div>
-      </article>
-      <article class="lunch-row" data-date="2026-09-10">
-        <div class="lunch-date"><span class="mon">SEP</span><span class="num">10</span></div>
-        <div class="lunch-body">
-          <h4>Charlie &ldquo;Snow Ball&rdquo; Walker<span class="org">SAFFE Day</span></h4>
-          <p class="menu">Menu coming soon.</p>
-        </div>
-      </article>
-      <article class="lunch-row" data-date="2026-09-17">
-        <div class="lunch-date"><span class="mon">SEP</span><span class="num">17</span></div>
-        <div class="lunch-body">
-          <h4>Stephanie Williams<span class="org">Kilgore College Women&rsquo;s Basketball Coach</span></h4>
-          <p class="menu">Menu coming soon.</p>
-        </div>
-      </article>
-      <article class="lunch-row" data-date="2026-09-24">
-        <div class="lunch-date"><span class="mon">SEP</span><span class="num">24</span></div>
-        <div class="lunch-body">
-          <h4>Students of the Month</h4>
-          <p class="menu">Menu coming soon.</p>
-        </div>
-      </article>
-    </div>
-    <p class="lunch-note">Want to speak to the club, or have a program worth sharing? Email <a href="mailto:info@kilgorelionsclub.org">info@kilgorelionsclub.org</a> and we will get you on the schedule.</p>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow"><span class="dot"></span>Thursdays at Noon</div>
+<h2>Upcoming Lunches</h2>
+<p>307 N. Rusk Street, $15 per person, home cooked every week. You do not have to be a member to eat with us — guests are always welcome, so bring a friend.</p>
+</div>
+<div class="lunch-list">
+<article class="lunch-row" data-date="2026-08-27">
+<div class="lunch-date"><span class="mon">AUG</span><span class="num">27</span></div>
+<div class="lunch-body">
+<h4>Willie Gooden<span class="org">Kilgore College Football Coach</span></h4>
+<p class="menu">Menu coming soon.</p>
+</div>
+</article>
+<article class="lunch-row" data-date="2026-09-03">
+<div class="lunch-date"><span class="mon">SEP</span><span class="num">3</span></div>
+<div class="lunch-body">
+<h4>Grace Henderson, LPC<span class="org">Executive Director, Operation True North</span></h4>
+<p class="menu">Menu coming soon.</p>
+</div>
+</article>
+<article class="lunch-row" data-date="2026-09-10">
+<div class="lunch-date"><span class="mon">SEP</span><span class="num">10</span></div>
+<div class="lunch-body">
+<h4>Charlie &ldquo;Snow Ball&rdquo; Walker<span class="org">SAFFE Day</span></h4>
+<p class="menu">Menu coming soon.</p>
+</div>
+</article>
+<article class="lunch-row" data-date="2026-09-17">
+<div class="lunch-date"><span class="mon">SEP</span><span class="num">17</span></div>
+<div class="lunch-body">
+<h4>Stephanie Williams<span class="org">Kilgore College Women&rsquo;s Basketball Coach</span></h4>
+<p class="menu">Menu coming soon.</p>
+</div>
+</article>
+<article class="lunch-row" data-date="2026-09-24">
+<div class="lunch-date"><span class="mon">SEP</span><span class="num">24</span></div>
+<div class="lunch-body">
+<h4>Students of the Month</h4>
+<p class="menu">Menu coming soon.</p>
+</div>
+</article>
+<article class="lunch-row" data-date="2026-10-01">
+<div class="lunch-date"><span class="mon">OCT</span><span class="num">1</span></div>
+<div class="lunch-body">
+<h4>Jonny Ferguson<span class="org">Retired Equipment Specialist, NASA</span></h4>
+<p class="menu">Menu coming soon.</p>
+</div>
+</article>
+<article class="lunch-row" data-date="2026-10-08">
+<div class="lunch-date"><span class="mon">OCT</span><span class="num">8</span></div>
+<div class="lunch-body">
+<h4>Randy Seitz<span class="org">Director, Kilgore Economic Development Corporation</span></h4>
+<p class="menu">Menu coming soon.</p>
+</div>
+</article>
+<article class="lunch-row pending" data-date="2026-10-15">
+<div class="lunch-date"><span class="mon">OCT</span><span class="num">15</span></div>
+<div class="lunch-body">
+<h4>Guest speaker to be announced</h4>
+<p class="menu">Menu coming soon.</p>
+</div>
+</article>
+<article class="lunch-row pending" data-date="2026-10-29">
+<div class="lunch-date"><span class="mon">OCT</span><span class="num">29</span></div>
+<div class="lunch-body">
+<h4>Guest speaker to be announced</h4>
+<p class="menu">Menu coming soon.</p>
+</div>
+</article>
+<article class="lunch-row" data-date="2026-11-05">
+<div class="lunch-date"><span class="mon">NOV</span><span class="num">5</span></div>
+<div class="lunch-body">
+<h4>No regular lunch this week<span class="org">Join us at the Coat Drive instead</span></h4>
+<p class="menu">CUTX Credit Union, 110 Midtown Plaza, 11:00 AM&ndash;1:00 PM. Food truck on site, new coat donations welcome.</p>
+</div>
+</article>
+<article class="lunch-row" data-date="2026-11-12">
+<div class="lunch-date"><span class="mon">NOV</span><span class="num">12</span></div>
+<div class="lunch-body">
+<h4>Lion Wayne Barton, CPA<span class="org">Texas Lions Camp</span></h4>
+<p class="menu">Menu coming soon.</p>
+</div>
+</article>
+</div>
+<p class="lunch-note">Want to speak to the club, or have a program worth sharing? Email <a href="mailto:info@kilgorelionsclub.org">info@kilgorelionsclub.org</a> and we will get you on the schedule.</p>
+</div>
 </section>
 
 <section class="section" id="events">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><span class="dot"></span>Mark Your Calendar</div>
-      <h2>Upcoming Events</h2>
-      <p>Every event raises money that stays right here in Kilgore. Come for the fun. Stay for the cause.</p>
-    </div>
-    <div class="events-grid">
-      <div class="event-feature">
-        <div class="tag">Featured Fundraiser</div>
-        <h3>Bingo Night</h3>
-        <div class="date-line">Saturday, September 12, 2026 · 6:00–8:00 PM</div>
-        <p>A night of bingo, chili, and community. All proceeds fund our local service projects. More details coming soon.</p>
-        <div class="prize"><span>🏆</span><span><strong>Grand Prize:</strong> 60 to 70 inch TV</span></div>
-        <a href="#join" class="btn btn-gold">Get Bingo Night Details</a>
-      </div>
-      <div class="event-side">
-        <div class="event-card photo">
-          <img alt="Kilgore Lions Club members and American Exchange Students gathered around a table with a blue Lions Club tablecloth and a flag display" src="./exchange-students.jpg">
-          <div class="body">
-            <div class="month">June–July</div>
-            <h4>American Exchange Students</h4>
-            <p>Kilgore Lions Club hosts American Exchange Students each summer.</p>
-            <a class="more-link" href="https://kilgorenewsherald.com/2025/07/28/07162025_knh_news_aep/" target="_blank" rel="noopener">Learn more →</a>
-          </div>
-        </div>
-        <div class="event-card photo">
-          <div class="gallery">
-            <img alt="Kilgore High School Health Science students, SkillsUSA state champions, in red blazers" src="./health-science-skillsusa.jpg">
-            <img alt="Health Science students practicing CPR on training manikins" src="./health-science-cpr.jpg">
-          </div>
-          <div class="body">
-            <div class="month">January</div>
-            <h4>Health Science Students</h4>
-            <p>Kilgore Lions Club supports Health Science Students from Kilgore High School.</p>
-            <a class="more-link" href="https://kilgorecurrent.com/category/clubs-organizations/kilgore-health-science/" target="_blank" rel="noopener">Learn more →</a>
-          </div>
-        </div>
-        <div class="event-card">
-          <img alt="Kilgore Lions Club members at the club tent during a community event" src="./oktoberfest.jpg">
-          <div>
-            <div class="month">October</div>
-            <h4>Oktoberfest</h4>
-            <p>Food, music, and fellowship for the whole family.</p>
-          </div>
-        </div>
-        <div class="event-card">
-          <img alt="Kilgore Lions Club members in club aprons serving at the chili lunch" src="./chili-lunch.jpg">
-          <div>
-            <div class="month">Fall</div>
-            <h4>Chili Lunch</h4>
-            <p>A warm bowl and good company. Date and location coming soon.</p>
-          </div>
-        </div>
-        <div class="event-card">
-          <img alt="Kilgore Lions Club members at last year's Coat Drive, gathered around a table on a rooftop patio" src="./coat-drive.jpg">
-          <div>
-            <div class="month">November</div>
-            <h4>Coat Drive</h4>
-            <p>Collecting money to buy coats for people in need, then handing them out on November 5, 2026.</p>
-          </div>
-        </div>
-        <div class="event-card photo">
-          <img alt="Scenes from the Halloween Carnival: bounce house, hay ride, costumed children, and volunteers at the concession table" src="./howloween-carnival.jpg">
-          <div class="body">
-            <div class="month">October 31</div>
-            <h4>Halloween Carnival</h4>
-            <p>Games and treats for kids of all ages, hosted right here in town. Six great raffle prizes drawn at 9:00 PM.</p>
-            <a class="more-link" href="raffle.html">See the raffle prizes →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow"><span class="dot"></span>Mark Your Calendar</div>
+<h2>Upcoming Events</h2>
+<p>Every event raises money that stays right here in Kilgore. Come for the fun. Stay for the cause.</p>
+</div>
+<div class="events-grid">
+<div class="event-feature">
+<div class="tag">Featured Fundraiser</div>
+<h3>Bingo Night</h3>
+<div class="date-line">Saturday, September 12, 2026 · 6:00–8:00 PM</div>
+<p>A night of bingo, chili, and community. All proceeds fund our local service projects. More details coming soon.</p>
+<div class="prize"><span>🏆</span><span><strong>Grand Prize:</strong> 60 to 70 inch TV</span></div>
+<a href="#join" class="btn btn-gold">Get Bingo Night Details</a>
+</div>
+<div class="event-side">
+<div class="event-card photo">
+<img alt="Kilgore Lions Club members and American Exchange Students gathered around a table with a blue Lions Club tablecloth and a flag display" src="./exchange-students.jpg">
+<div class="body">
+<div class="month">June–July</div>
+<h4>American Exchange Students</h4>
+<p>Kilgore Lions Club hosts American Exchange Students each summer.</p>
+<a class="more-link" href="https://kilgorenewsherald.com/2025/07/28/07162025_knh_news_aep/" target="_blank" rel="noopener">Learn more →</a>
+</div>
+</div>
+<div class="event-card photo">
+<div class="gallery">
+<img alt="Kilgore High School Health Science students, SkillsUSA state champions, in red blazers" src="./health-science-skillsusa.jpg">
+<img alt="Health Science students practicing CPR on training manikins" src="./health-science-cpr.jpg">
+</div>
+<div class="body">
+<div class="month">January</div>
+<h4>Health Science Students</h4>
+<p>Kilgore Lions Club supports Health Science Students from Kilgore High School.</p>
+<a class="more-link" href="https://kilgorecurrent.com/category/clubs-organizations/kilgore-health-science/" target="_blank" rel="noopener">Learn more →</a>
+</div>
+</div>
+<div class="event-card">
+<img alt="Kilgore Lions Club members at the club tent during a community event" src="./oktoberfest.jpg">
+<div>
+<div class="month">October</div>
+<h4>Oktoberfest</h4>
+<p>Food, music, and fellowship for the whole family.</p>
+</div>
+</div>
+<div class="event-card">
+<img alt="Kilgore Lions Club members in club aprons serving at the chili lunch" src="./chili-lunch.jpg">
+<div>
+<div class="month">Fall</div>
+<h4>Chili Lunch</h4>
+<p>A warm bowl and good company. Date and location coming soon.</p>
+</div>
+</div>
+<div class="event-card">
+<img alt="Kilgore Lions Club members at last year's Coat Drive, gathered around a table on a rooftop patio" src="./coat-drive.jpg">
+<div>
+<div class="month">November 5</div>
+<h4>Coat Drive Fundraiser</h4>
+<p>11:00 AM&ndash;1:00 PM at CUTX Credit Union, 110 Midtown Plaza, with Credit Union of Texas. Food truck on site, new coat donations welcome, or give online to help us buy coats.</p>
+</div>
+</div>
+<div class="event-card photo">
+<img alt="Scenes from the Halloween Carnival: bounce house, hay ride, costumed children, and volunteers at the concession table" src="./howloween-carnival.jpg">
+<div class="body">
+<div class="month">October 31</div>
+<h4>Halloween Carnival</h4>
+<p>Games and treats for kids of all ages, hosted right here in town. Six great raffle prizes drawn at 9:00 PM.</p>
+<a class="more-link" href="raffle.html">See the raffle prizes →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <section class="section section-alt" id="service">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><span class="dot"></span>Why We Show Up</div>
-      <h2>What We Do</h2>
-      <p>Lions Clubs International has one simple call. We serve. In Kilgore that means recognizing young people, supporting our schools, and doing steady work for our neighbors.</p>
-    </div>
-    <div class="service-grid">
-      <div class="service-card">
-        <img alt="Students receiving Student of the Month plaques at a Kilgore Lions Club meeting" src="./student-of-the-month.jpg">
-        <div class="body">
-          <h4>Student of the Month</h4>
-          <p>We honor local students who lead, serve, and set the standard for the ones coming up behind them.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <img alt="Guests including a Kilgore College Rangerette at a Kilgore Lions Club meeting" src="./guests-programs.jpg">
-        <div class="body">
-          <h4>Guests &amp; Programs</h4>
-          <p>Every week brings a speaker or guest from the community, from the Rangerettes to local leaders.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <img alt="A Kilgore Lions Club member presenting a donation to a community partner" src="./giving-back.jpg">
-        <div class="body">
-          <h4>Giving Back Locally</h4>
-          <p>The money we raise goes straight back into Kilgore, to the causes and people our members know by name.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow"><span class="dot"></span>Why We Show Up</div>
+<h2>What We Do</h2>
+<p>Lions Clubs International has one simple call. We serve. In Kilgore that means recognizing young people, supporting our schools, and doing steady work for our neighbors.</p>
+</div>
+<div class="service-grid">
+<div class="service-card">
+<img alt="Students receiving Student of the Month plaques at a Kilgore Lions Club meeting" src="./student-of-the-month.jpg">
+<div class="body">
+<h4>Student of the Month</h4>
+<p>We honor local students who lead, serve, and set the standard for the ones coming up behind them.</p>
+</div>
+</div>
+<div class="service-card">
+<img alt="Guests including a Kilgore College Rangerette at a Kilgore Lions Club meeting" src="./guests-programs.jpg">
+<div class="body">
+<h4>Guests &amp; Programs</h4>
+<p>Every week brings a speaker or guest from the community, from the Rangerettes to local leaders.</p>
+</div>
+</div>
+<div class="service-card">
+<img alt="A Kilgore Lions Club member presenting a donation to a community partner" src="./giving-back.jpg">
+<div class="body">
+<h4>Giving Back Locally</h4>
+<p>The money we raise goes straight back into Kilgore, to the causes and people our members know by name.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><span class="dot"></span>Our People</div>
-      <h2>The 2026–2027 Board</h2>
-      <p>Neighbors, business owners, retirees, and volunteers. This is who keeps the lights on.</p>
-    </div>
-    <figure class="board-figure">
-      <img alt="The Kilgore Lions Club board and members for 2026 to 2027, gathered at the club hall" src="./board-2026-2027.jpg">
-      <figcaption>Kilgore Lions Club board and members, 2026–2027.</figcaption>
-    </figure>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow"><span class="dot"></span>Our People</div>
+<h2>The 2026–2027 Board</h2>
+<p>Neighbors, business owners, retirees, and volunteers. This is who keeps the lights on.</p>
+</div>
+<figure class="board-figure">
+<img alt="The Kilgore Lions Club board and members for 2026 to 2027, gathered at the club hall" src="./board-2026-2027.jpg">
+<figcaption>Kilgore Lions Club board and members, 2026–2027.</figcaption>
+</figure>
+</div>
 </section>
 
 <section class="section section-alt" id="give">
-  <div class="wrap">
-    <div class="give-band">
-      <div>
-        <div class="eyebrow"><span class="dot"></span>Support the Club</div>
-        <h2>Give to the Kilgore Lions Club</h2>
-        <p>Your gift goes straight back into Kilgore &mdash; our students, our schools, and neighbors our members know by name. Give once, or set up a monthly gift that keeps working all year long.</p>
-        <div class="give-actions">
-          <a href="https://www.paypal.com/donate/?hosted_button_id=FU5EFC6DERBBW" target="_blank" rel="noopener" class="btn btn-gold">Donate Now</a>
-          <span class="give-methods">PayPal or Venmo &mdash; both on the same page</span>
-        </div>
-        <p class="give-fine">Donations are received by Kilgore Lions Club Charities Inc, a 501(c)(3) organization.</p>
-      </div>
-      <div class="give-side">
-        <h4>Rather not give online?</h4>
-        <p>Mail a check made out to Kilgore Lions Club Charities, or hand it to any member at Thursday lunch.</p>
-        <div class="give-addr">PO Box 1256<br>Kilgore, Texas 75663</div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="give-band">
+<div>
+<div class="eyebrow"><span class="dot"></span>Support the Club</div>
+<h2>Give to the Kilgore Lions Club</h2>
+<p>Your gift goes straight back into Kilgore &mdash; our students, our schools, and neighbors our members know by name. Give once, or set up a monthly gift that keeps working all year long.</p>
+<div class="give-actions">
+<a href="https://www.paypal.com/donate/?hosted_button_id=FU5EFC6DERBBW" target="_blank" rel="noopener" class="btn btn-gold">Donate Now</a>
+<span class="give-methods">PayPal or Venmo &mdash; both on the same page</span>
+</div>
+<p class="give-fine">Donations are received by Kilgore Lions Club Charities Inc, a 501(c)(3) organization.</p>
+</div>
+<div class="give-side">
+<h4>Rather not give online?</h4>
+<p>Mail a check made out to Kilgore Lions Club Charities, or hand it to any member at Thursday lunch.</p>
+<div class="give-addr">PO Box 1256<br>Kilgore, Texas 75663</div>
+</div>
+</div>
+</div>
 </section>
 
 <section class="section" id="join">
-  <div class="wrap">
-    <div class="join">
-      <div>
-        <h2>Ready to join us?</h2>
-        <p>Show up to a Thursday lunch. No commitment needed to come try it out. Bring a friend, bring an appetite, and see whether this is your kind of room. Most of our members walked in exactly the same way.</p>
-      </div>
-      <div class="join-box">
-        <h4>Stay in the loop</h4>
-        <p>Join our GroupMe for weekly menu reminders and event updates, sent straight to your phone. Or find us on Facebook.</p>
-        <a href="https://groupme.com/join_group/116471191/upNUgMLu" target="_blank" rel="noopener" class="btn btn-gold">Join Our GroupMe</a>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="join">
+<div>
+<h2>Ready to join us?</h2>
+<p>Show up to a Thursday lunch. No commitment needed to come try it out. Bring a friend, bring an appetite, and see whether this is your kind of room. Most of our members walked in exactly the same way.</p>
+</div>
+<div class="join-box">
+<h4>Stay in the loop</h4>
+<p>Join our GroupMe for weekly menu reminders and event updates, sent straight to your phone. Or find us on Facebook.</p>
+<a href="https://groupme.com/join_group/116471191/upNUgMLu" target="_blank" rel="noopener" class="btn btn-gold">Join Our GroupMe</a>
+</div>
+</div>
+<div class="join-video">
+<video controls preload="none" poster="./video-poster.jpg">
+<source src="./member-story.mp4" type="video/mp4">
+Your browser does not support the video tag. <a href="./member-story.mp4">Watch the video here</a>.
+</video>
+<p class="join-video-cap">Lion Randy Renshaw on what being a Kilgore Lion means to him.</p>
+</div>
+</div>
 </section>
 
 </main>
 
 <footer>
-  <div class="wrap footer-inner">
-    <div>
-      <div class="footer-brand-row">
-        <img alt="Lions Clubs International emblem" src="./lci-emblem.png">
-        <span class="footer-brand">Kilgore Lions Club</span>
-      </div>
-      <p class="meet-line">Meeting every Thursday at noon.</p>
-      <div class="addr-block">
-        <div class="addr">
-          <h6>Visit Us</h6>
-          307 North Rusk Street<br>Kilgore, Texas 75662
-        </div>
-        <div class="addr">
-          <h6>Mail Us</h6>
-          PO Box 1256<br>Kilgore, Texas 75663
-        </div>
-        <div class="addr">
-          <h6>Email Us</h6>
-          <a class="mail-link" href="mailto:info@kilgorelionsclub.org">info@kilgorelionsclub.org</a>
-        </div>
-      </div>
-    </div>
-    <div class="cols">
-      <div class="col">
-        <h5>Visit</h5>
-        <a href="#lunch">Thursday Lunch</a>
-        <a href="#events">Events</a>
-        <a href="raffle.html">Halloween Raffle</a>
-        <a href="#service">What We Do</a>
-        <a href="#give">Give</a>
-      </div>
-      <div class="col">
-        <h5>Connect</h5>
-        <a href="https://www.facebook.com/KilgoreLionsClub" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://groupme.com/join_group/116471191/upNUgMLu" target="_blank" rel="noopener">GroupMe</a>
-        <a href="mailto:info@kilgorelionsclub.org">Contact Us</a>
-      </div>
-    </div>
-  </div>
-  <div class="wrap">
-    <p class="legal">© 2026 Kilgore Lions Club · Kilgore, Texas · Serving since 1931<br>The Lions Clubs International emblem is a registered trademark of Lions Clubs International, used by a chartered member club.</p>
-  </div>
+<div class="wrap footer-inner">
+<div>
+<div class="footer-brand-row">
+<img alt="Lions Clubs International emblem" src="./lci-emblem.png">
+<span class="footer-brand">Kilgore Lions Club</span>
+</div>
+<p class="meet-line">Meeting every Thursday at noon.</p>
+<div class="addr-block">
+<div class="addr">
+<h6>Visit Us</h6>
+307 North Rusk Street<br>Kilgore, Texas 75662
+</div>
+<div class="addr">
+<h6>Mail Us</h6>
+PO Box 1256<br>Kilgore, Texas 75663
+</div>
+<div class="addr">
+<h6>Email Us</h6>
+<a class="mail-link" href="mailto:info@kilgorelionsclub.org">info@kilgorelionsclub.org</a>
+</div>
+</div>
+</div>
+<div class="cols">
+<div class="col">
+<h5>Visit</h5>
+<a href="#lunch">Thursday Lunch</a>
+<a href="#events">Events</a>
+<a href="raffle.html">Halloween Raffle</a>
+<a href="#service">What We Do</a>
+<a href="#give">Give</a>
+</div>
+<div class="col">
+<h5>Connect</h5>
+<a href="https://www.facebook.com/KilgoreLionsClub" target="_blank" rel="noopener">Facebook</a>
+<a href="https://groupme.com/join_group/116471191/upNUgMLu" target="_blank" rel="noopener">GroupMe</a>
+<a href="mailto:info@kilgorelionsclub.org">Contact Us</a>
+</div>
+</div>
+</div>
+<div class="wrap">
+<p class="legal">© 2026 Kilgore Lions Club · Kilgore, Texas · Serving since 1931<br>The Lions Clubs International emblem is a registered trademark of Lions Clubs International, used by a chartered member club.</p>
+</div>
 </footer>
-
 
 <script>
 /* Upcoming Lunches: badge the next lunch and hide the ones already past.
-   Each .lunch-row carries data-date="YYYY-MM-DD". Add new rows with that
-   attribute and everything below keeps working on its own. */
+Each .lunch-row carries data-date="YYYY-MM-DD". Add new rows with that
+attribute and everything below keeps working on its own. */
 (function () {
-  function localDate(str) {
-    var p = String(str).split('-');
-    return new Date(+p[0], +p[1] - 1, +p[2]);   // local midnight, not UTC
-  }
+function localDate(str) {
+var p = String(str).split('-');
+return new Date(+p[0], +p[1] - 1, +p[2]); // local midnight, not UTC
+}
 
-  function refreshLunches() {
-    var list = document.querySelector('.lunch-list');
-    if (!list) return;
+function refreshLunches() {
+var list = document.querySelector('.lunch-list');
+if (!list) return;
 
-    var rows = Array.prototype.slice.call(list.querySelectorAll('.lunch-row[data-date]'));
-    if (!rows.length) return;
+var rows = Array.prototype.slice.call(list.querySelectorAll('.lunch-row[data-date]'));
+if (!rows.length) return;
 
-    var now = new Date();
-    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    var DAY = 86400000;
-    var upcoming = null;
+var now = new Date();
+var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+var DAY = 86400000;
+var upcoming = null;
 
-    rows.forEach(function (row) {
-      var when = localDate(row.getAttribute('data-date'));
-      var past = when < today;
+rows.forEach(function (row) {
+var when = localDate(row.getAttribute('data-date'));
+var past = when < today;
 
-      row.hidden = past;
-      row.classList.remove('next');
+row.hidden = past;
+row.classList.remove('next');
 
-      var old = row.querySelector('.lunch-badge');
-      if (old) old.parentNode.removeChild(old);
+var old = row.querySelector('.lunch-badge');
+if (old) old.parentNode.removeChild(old);
 
-      if (!past && !upcoming) upcoming = { row: row, days: Math.round((when - today) / DAY) };
-    });
+if (!past && !upcoming) upcoming = { row: row, days: Math.round((when - today) / DAY) };
+});
 
-    var note = list.parentNode.querySelector('.lunch-empty');
-    if (note) note.parentNode.removeChild(note);
+var note = list.parentNode.querySelector('.lunch-empty');
+if (note) note.parentNode.removeChild(note);
 
-    if (upcoming) {
-      upcoming.row.classList.add('next');
-      var label = upcoming.days === 0 ? 'Today'
-                : upcoming.days <= 6  ? 'This Week'
-                : 'Next Up';
-      var badge = document.createElement('div');
-      badge.className = 'lunch-badge';
-      badge.textContent = label;
-      var body = upcoming.row.querySelector('.lunch-body');
-      if (body) body.insertBefore(badge, body.firstChild);
-    } else {
-      var empty = document.createElement('p');
-      empty.className = 'lunch-empty';
-      empty.innerHTML = 'The next round of lunch dates is being scheduled. We still meet every Thursday at noon \u2014 join our <a href="https://groupme.com/join_group/116471191/upNUgMLu" target="_blank" rel="noopener">GroupMe</a> for the weekly reminder.';
-      list.parentNode.insertBefore(empty, list.nextSibling);
-    }
-  }
+if (upcoming) {
+upcoming.row.classList.add('next');
+var label = upcoming.days === 0 ? 'Today'
+: upcoming.days <= 6 ? 'This Week'
+: 'Next Up';
+var badge = document.createElement('div');
+badge.className = 'lunch-badge';
+badge.textContent = label;
+var body = upcoming.row.querySelector('.lunch-body');
+if (body) body.insertBefore(badge, body.firstChild);
+} else {
+var empty = document.createElement('p');
+empty.className = 'lunch-empty';
+empty.innerHTML = 'The next round of lunch dates is being scheduled. We still meet every Thursday at noon — join our <a href="https://groupme.com/join_group/116471191/upNUgMLu" target="_blank" rel="noopener">GroupMe</a> for the weekly reminder.';
+list.parentNode.insertBefore(empty, list.nextSibling);
+}
+}
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', refreshLunches);
-  } else {
-    refreshLunches();
-  }
-  // Re-check if the tab has been left open across midnight.
-  setInterval(refreshLunches, 60 * 60 * 1000);
-  document.addEventListener('visibilitychange', function () {
-    if (!document.hidden) refreshLunches();
-  });
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', refreshLunches);
+} else {
+refreshLunches();
+}
+// Re-check if the tab has been left open across midnight.
+setInterval(refreshLunches, 60 * 60 * 1000);
+document.addEventListener('visibilitychange', function () {
+if (!document.hidden) refreshLunches();
+});
 })();
 </script>
 
