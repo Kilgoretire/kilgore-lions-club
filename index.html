@@ -262,10 +262,16 @@ content: ""; position: absolute; top: -70px; right: -70px;
 width: 210px; height: 210px; border-radius: 50%;
 background: radial-gradient(circle, rgba(255,207,6,0.26), transparent 70%);
 }
+.event-feature-photo {
+margin: -34px -34px 20px; border-radius: 14px 14px 0 0; overflow: hidden;
+position: relative; z-index: 1;
+}
+.event-feature-photo img { width: 100%; height: 200px; object-fit: cover; display: block; }
 .event-feature .tag {
 display: inline-block; background: var(--gold); color: var(--blue-ink);
 font-weight: 800; font-size: 11.5px; letter-spacing: 0.08em;
 text-transform: uppercase; padding: 6px 12px; border-radius: 100px; margin-bottom: 16px;
+position: relative; z-index: 1;
 }
 .event-feature h3 { font-size: 32px; color: #fff; margin-bottom: 10px; }
 .event-feature .date-line { font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 12px; }
@@ -438,6 +444,29 @@ footer .col a:hover { color: var(--blue); }
 
 <main id="main">
 
+<section class="section" id="join">
+<div class="wrap">
+<div class="join">
+<div>
+<h2>Ready to join us?</h2>
+<p>Show up to a Thursday lunch. No commitment needed to come try it out. Bring a friend, bring an appetite, and see whether this is your kind of room. Most of our members walked in exactly the same way.</p>
+</div>
+<div class="join-box">
+<h4>Stay in the loop</h4>
+<p>Join our GroupMe for weekly menu reminders and event updates, sent straight to your phone. Or find us on Facebook.</p>
+<a href="https://groupme.com/join_group/116471191/upNUgMLu" target="_blank" rel="noopener" class="btn btn-gold">Join Our GroupMe</a>
+</div>
+</div>
+<div class="join-video">
+<video controls preload="none" poster="./video-poster.jpg">
+<source src="./member-story.mp4" type="video/mp4">
+Your browser does not support the video tag. <a href="./member-story.mp4">Watch the video here</a>.
+</video>
+<p class="join-video-cap">Lion Randy Renshaw on what being a Kilgore Lion means to him.</p>
+</div>
+</div>
+</section>
+
 <section class="bulletin-section" id="lunch">
 <div class="wrap">
 <div class="bulletin">
@@ -519,10 +548,17 @@ footer .col a:hover { color: var(--blue); }
 <p class="menu">Menu coming soon.</p>
 </div>
 </article>
-<article class="lunch-row pending" data-date="2026-10-29">
+<article class="lunch-row" data-date="2026-10-22">
+<div class="lunch-date"><span class="mon">OCT</span><span class="num">22</span></div>
+<div class="lunch-body">
+<h4>No lunch this week<span class="org">East Texas Oilmen&rsquo;s Chili Cook-Off downtown</span></h4>
+<p class="menu">World&rsquo;s Richest Acre, Downtown Kilgore. The whole town will be there, so we are taking the week off.</p>
+</div>
+</article>
+<article class="lunch-row" data-date="2026-10-29">
 <div class="lunch-date"><span class="mon">OCT</span><span class="num">29</span></div>
 <div class="lunch-body">
-<h4>Guest speaker to be announced</h4>
+<h4>Students of the Month</h4>
 <p class="menu">Menu coming soon.</p>
 </div>
 </article>
@@ -554,12 +590,15 @@ footer .col a:hover { color: var(--blue); }
 </div>
 <div class="events-grid">
 <div class="event-feature">
-<div class="tag">Featured Fundraiser</div>
+<div class="event-feature-photo">
+<img alt="A packed room of Kilgore Lions Club members and guests playing bingo together at Bingo Night" src="./bingo-night-crowd.jpg">
+</div>
+<div class="tag">Recap</div>
 <h3>Bingo Night</h3>
-<div class="date-line">Saturday, September 12, 2026 · 6:00–8:00 PM</div>
-<p>A night of bingo, chili, and community. All proceeds fund our local service projects. More details coming soon.</p>
-<div class="prize"><span>🏆</span><span><strong>Grand Prize:</strong> 60 to 70 inch TV</span></div>
-<a href="#join" class="btn btn-gold">Get Bingo Night Details</a>
+<div class="date-line">Saturday, September 12, 2026</div>
+<p>What a turnout. Members, families, and neighbors filled the hall for an evening of bingo and community, all to support our local service projects.</p>
+<div class="prize"><span>🏆</span><span><strong>Grand Prize:</strong> one lucky member walked away with a 65 inch Vizio Smart TV</span></div>
+<p>Thank you to our sponsors: Kilgore Tire and Auto Care, Brookshire&rsquo;s Food &amp; Pharmacy, East Texas Treatment Center, and Whataburger.</p>
 </div>
 <div class="event-side">
 <div class="event-card photo">
@@ -686,29 +725,6 @@ footer .col a:hover { color: var(--blue); }
 <p>Mail a check made out to Kilgore Lions Club Charities, or hand it to any member at Thursday lunch.</p>
 <div class="give-addr">PO Box 1256<br>Kilgore, Texas 75663</div>
 </div>
-</div>
-</div>
-</section>
-
-<section class="section" id="join">
-<div class="wrap">
-<div class="join">
-<div>
-<h2>Ready to join us?</h2>
-<p>Show up to a Thursday lunch. No commitment needed to come try it out. Bring a friend, bring an appetite, and see whether this is your kind of room. Most of our members walked in exactly the same way.</p>
-</div>
-<div class="join-box">
-<h4>Stay in the loop</h4>
-<p>Join our GroupMe for weekly menu reminders and event updates, sent straight to your phone. Or find us on Facebook.</p>
-<a href="https://groupme.com/join_group/116471191/upNUgMLu" target="_blank" rel="noopener" class="btn btn-gold">Join Our GroupMe</a>
-</div>
-</div>
-<div class="join-video">
-<video controls preload="none" poster="./video-poster.jpg">
-<source src="./member-story.mp4" type="video/mp4">
-Your browser does not support the video tag. <a href="./member-story.mp4">Watch the video here</a>.
-</video>
-<p class="join-video-cap">Lion Randy Renshaw on what being a Kilgore Lion means to him.</p>
 </div>
 </div>
 </section>
